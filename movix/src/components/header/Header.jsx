@@ -105,7 +105,7 @@ const Header = () => {
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyUp={searchQueryHandler}
               />
-              <VscChromeClose onClick={() => setMobileMenu(false)} />
+              <VscChromeClose onClick={() => setShowSearch(false)} />
             </div>
           </ContentWrapper>
         </div>

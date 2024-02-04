@@ -11,6 +11,7 @@ const HeroBanner = () => {
   const [query, setQuery] = useState('');
   const navigate = useNavigate();
   const { url } = useSelector((state) => state.home);
+  console.log('url', url);
   const { data, loading } = useFetch('/movie/upcoming');
   useEffect(() => {
     const bg =
@@ -33,7 +34,6 @@ const HeroBanner = () => {
       )}
       <div className="opacity-layer"></div>
       <ContentWrapper>
-        <div className="wrapper">
           <div className="heroBannerContent">
             <span className="title">Welcome</span>
             <span className="subTitle">
@@ -49,7 +49,6 @@ const HeroBanner = () => {
               <button>Search</button>
             </div>
           </div>
-        </div>
       </ContentWrapper>
     </div>
   );
